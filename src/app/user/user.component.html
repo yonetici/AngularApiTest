@@ -1,0 +1,13 @@
+<div class='card' *ngIf="veri">
+  <div class='card-header'>
+    Recent Members
+  </div>
+
+    <ol class="list-group">
+      <li class="list-group-item list-group-item-action" *ngFor="let ver of veri | sortBy:'desc':'id'; let i = index">
+        <a href="user/{{ver.id}}">{{(i+1) +"-"+ ver.name}}</a>
+      </li>
+    </ol>
+
+
+</div>
