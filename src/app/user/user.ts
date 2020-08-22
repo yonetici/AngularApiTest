@@ -21,3 +21,25 @@ export interface IUser {
     bs: string;
 };
 }
+
+export interface IPost {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
+
+export interface IAlbum {
+  userId: number;
+  id: number;
+  title: string;
+}
+
+export interface IPhotos {
+  albumId: number;
+  id: number;
+  title: string;
+  url: string;
+  thumbnailUrl: string;
+}
+

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
-import {IUser} from './user';
+import {IAlbum, IPhotos, IPost, IUser} from './user';
 import {catchError, map, tap} from 'rxjs/operators';
 
 @Injectable({
@@ -23,14 +23,22 @@ export class UserService {
   }
 
   getUser(id: number): Observable<IUser | undefined> {
-    return this.httpClient.get<IUser>(this.userListUrl + "users/" + id);
+    return this.httpClient.get<IUser>(this.userListUrl + 'users/' + id);
 /*    return this.getUsers().pipe(
       map((users: IUser[]) => users.find(p => p.id === id))
     );
  */
   }
+  getPostsbyId(id: number): Observable<IPost[]> {
+    return this.httpClient.get<IPost[]>(this.userListUrl + 'posts?userId=' + id);
+  }
+
+  getAlbumsbyId(id: number): Observable<IAlbum[]> {
+    return this.httpClient.get<IAlbum[]>(this.userListUrl + 'albums?userId=' + id);
+  }
+
   private handleError(err: HttpErrorResponse ) {
-    let errorMessage = '';
+    let errorMessage: string;
     if (err.error instanceof ErrorEvent) {
       errorMessage = `An error occured: ${err.error.message}`;
     } else {

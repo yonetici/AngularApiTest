@@ -1,10 +1,11 @@
 <div class='card' *ngIf="user">
   <div class='card-header'>
-    Recent Blog Posts
+    {{user.name}} <br>
+    {{posts?.length}} posts<br>
+    {{albums?.length}} albums<br>
   </div>
 
   <ol class="list-group">
-    <li class="list-group-item list-group-item-action" >Name: {{user.name}}</li>
     <li class="list-group-item list-group-item-action" >Username: {{user.username}}</li>
     <li class="list-group-item list-group-item-action" >Email: {{user.email}}</li>
     <li class="list-group-item list-group-item-action" >Website: {{user.website}}</li>
