@@ -1,0 +1,17 @@
+<div class='card' *ngIf="user">
+  <div class='card-header'>
+    Recent Blog Posts
+  </div>
+
+  <ol class="list-group">
+    <li class="list-group-item list-group-item-action" >Name: {{user.name}}</li>
+    <li class="list-group-item list-group-item-action" >Username: {{user.username}}</li>
+    <li class="list-group-item list-group-item-action" >Email: {{user.email}}</li>
+    <li class="list-group-item list-group-item-action" >Website: {{user.website}}</li>
+    <li class="list-group-item list-group-item-action" >Phone: {{user.phone}}</li>
+    <li class="list-group-item list-group-item-action" >Company: {{user.company.name}}</li>
+    <li class="list-group-item list-group-item-action" >Address: {{user.address.street + " " + user.address.suite + " " + user.address.city}}</li>
+  </ol>
+
+
+</div>
