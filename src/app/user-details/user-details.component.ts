@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../user/user.service';
-import {IAlbum, IPhotos, IPost, IUser} from '../user/user';
+import {IAlbum, IPost, IUser} from '../user/user';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
