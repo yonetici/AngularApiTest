@@ -1,8 +1,8 @@
 <div class='card' *ngIf="user">
   <div class='card-header'>
     {{user.name}} <br>
-    {{posts?.length}} posts<br>
-    {{albums?.length}} albums<br>
+    <a href="posts/{{user.id}}">{{posts?.length}} posts</a><br>
+    <a href="albums/{{user.id}}">{{albums?.length}} albums</a><br>
   </div>
 
   <ol class="list-group">
