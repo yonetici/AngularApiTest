@@ -8,6 +8,7 @@ import {NgpSortModule} from 'ngp-sort-pipe';
 import {RouterModule} from '@angular/router';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import {UserPostsComponent} from './user-details/user-posts.component';
+import {UserAlbumsComponent} from './user-details/user-albums.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {UserPostsComponent} from './user-details/user-posts.component';
     NavbarComponent,
     UserComponent,
     UserDetailsComponent,
-    UserPostsComponent
+    UserPostsComponent,
+    UserAlbumsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,7 @@ import {UserPostsComponent} from './user-details/user-posts.component';
       {path: 'users', component: UserComponent},
       {path: 'user/:id', component: UserDetailsComponent},
       {path: 'posts/:id', component: UserPostsComponent},
+      {path: 'albums/:id', component: UserAlbumsComponent},
       {path: 'welcome', component: UserComponent},
       {path: '', redirectTo: 'welcome', pathMatch: 'full'},
       {path: '**', redirectTo: 'welcome', pathMatch: 'full'}
